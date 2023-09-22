@@ -7,7 +7,6 @@ import eco.monitoring.api.service.PollutionService;
 import eco.monitoring.api.service.mapper.PollutionMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
