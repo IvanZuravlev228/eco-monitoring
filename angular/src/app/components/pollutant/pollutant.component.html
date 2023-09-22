@@ -1,0 +1,27 @@
+<div><button (click)="getAllPollutant()">Show all pollutant</button></div>
+
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>name</th>
+      <th>minMass</th>
+      <th>maxMass</th>
+      <th>gdk</th>
+      <th>dangerClass</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let poll of pollutants">
+      <td>{{ poll.id }}</td>
+      <td>{{ poll.name }}</td>
+      <td>{{ poll.minMass }}</td>
+      <td>{{ poll.maxMass }}</td>
+      <td>{{ poll.gdk }}</td>
+      <td>{{ poll.dangerClass }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

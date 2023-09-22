@@ -1,0 +1,25 @@
+<div><button (click)="getAllPollution()">Show all pollution</button></div>
+
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>companyId</th>
+      <th>pollutantId</th>
+      <th>valuePollution</th>
+      <th>year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let poll of pollutions">
+      <td>{{ poll.id }}</td>
+      <td>{{ poll.companyId }}</td>
+      <td>{{ poll.pollutantId }}</td>
+      <td>{{ poll.valuePollution }}</td>
+      <td>{{ poll.year }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
