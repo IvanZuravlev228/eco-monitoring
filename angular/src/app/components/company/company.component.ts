@@ -23,4 +23,14 @@ export class CompanyComponent {
       }
     })
   }
+
+  update(company: Company) {
+    this.companyService.update(company.id, company).subscribe({
+      next: (updatedTask) => {
+      },
+      error: (error) => {
+
+      }
+    })
+  }
 }

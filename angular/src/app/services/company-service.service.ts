@@ -16,4 +16,12 @@ export class CompanyServiceService {
 
       }});
   }
+
+  update(prevId: number, company: Company) {
+    const body = JSON.stringify(company);
+    return this.http.put<Company>(environment.backendURL + "/companies/" + prevId, body, {
+      headers: {
+        "Content-Type": "application/json"
+      }});
+  }
 }

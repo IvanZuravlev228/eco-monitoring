@@ -10,4 +10,6 @@ public interface CompanyService {
     List<Company> getAll();
 
     void saveAll(List<Company> companies);
+
+    Company update(Long prevId, Company newCompany);
 }

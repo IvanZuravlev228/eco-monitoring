@@ -30,4 +30,9 @@ public class CompanyController {
         companyService.saveAll(companies);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PutMapping("/{prevId}")
+    public ResponseEntity<Company> update(@PathVariable Long prevId, @RequestBody Company newCompany) {
+        return new ResponseEntity<>(companyService.update(prevId, newCompany), HttpStatus.OK);
+    }
 }

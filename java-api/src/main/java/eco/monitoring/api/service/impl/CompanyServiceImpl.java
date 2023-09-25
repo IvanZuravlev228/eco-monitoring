@@ -28,4 +28,11 @@ public class CompanyServiceImpl implements CompanyService {
     public void saveAll(List<Company> companies) {
         companyRepository.saveAll(companies);
     }
+
+    @Override
+    public Company update(Long prevId, Company newCompany) {
+        Company prevCompany = getById(prevId);
+        newCompany.setId(prevCompany.getId());
+        return companyRepository.save(newCompany);
+    }
 }
