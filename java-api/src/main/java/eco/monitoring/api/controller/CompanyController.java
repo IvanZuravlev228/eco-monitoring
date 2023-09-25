@@ -21,6 +21,7 @@ public class CompanyController {
 
     @GetMapping
     public ResponseEntity<List<Company>> getAll() {
+        // test controller
         return new ResponseEntity<>(companyService.getAll(), HttpStatus.OK);
     }
 
