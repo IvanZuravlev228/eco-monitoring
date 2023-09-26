@@ -10,4 +10,6 @@ public interface PollutantService {
     List<Pollutant> getAll();
 
     void saveAll(List<Pollutant> pollutants);
+
+    Pollutant findByName(String name);
 }

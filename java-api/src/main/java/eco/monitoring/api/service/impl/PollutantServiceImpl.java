@@ -28,4 +28,9 @@ public class PollutantServiceImpl implements PollutantService {
     public void saveAll(List<Pollutant> pollutants) {
         pollutantRepository.saveAll(pollutants);
     }
+
+    @Override
+    public Pollutant findByName(String name) {
+        return pollutantRepository.findByName(name);
+    }
 }

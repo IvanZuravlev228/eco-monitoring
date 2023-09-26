@@ -14,6 +14,11 @@ public class CompanyServiceImpl implements CompanyService {
     private final CompanyRepository companyRepository;
 
     @Override
+    public Company save(Company company) {
+        return companyRepository.save(company);
+    }
+
+    @Override
     public Company getById(Long id) {
         return companyRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("Can't find company by id: " + id));
@@ -34,5 +39,10 @@ public class CompanyServiceImpl implements CompanyService {
         Company prevCompany = getById(prevId);
         newCompany.setId(prevCompany.getId());
         return companyRepository.save(newCompany);
+    }
+
+    @Override
+    public Company findByName(String name) {
+        return companyRepository.findByName(name);
     }
 }

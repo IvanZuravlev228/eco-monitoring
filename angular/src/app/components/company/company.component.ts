@@ -9,6 +9,7 @@ import {Company} from "../../model/Company";
 })
 export class CompanyComponent {
   companies: Company[] = [];
+  company: Company = new Company();
 
   constructor(private companyService: CompanyServiceService) {
   }
@@ -29,7 +30,18 @@ export class CompanyComponent {
       next: (updatedTask) => {
       },
       error: (error) => {
+        console.log(error);
+      }
+    })
+  }
 
+  save() {
+    this.companyService.save(this.company).subscribe({
+      next: (company) => {
+        this.companies.push(company);
+      },
+      error: (error) => {
+        console.log(error);
       }
     })
   }
