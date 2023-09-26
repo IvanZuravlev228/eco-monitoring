@@ -13,6 +13,11 @@ public class PollutionServiceImpl implements PollutionService {
     private final PollutionRepository pollutionRepository;
 
     @Override
+    public Pollution save(Pollution pollution) {
+        return pollutionRepository.save(pollution);
+    }
+
+    @Override
     public Pollution getById(Long id) {
         return pollutionRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("Can't find by id: " + id));

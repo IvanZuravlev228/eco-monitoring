@@ -1,3 +1,28 @@
+<h2>Add new pollution</h2>
+<form (ngSubmit)="save()">
+  <div>
+    Company name:
+    <input type="text" class="company-name" [(ngModel)]="pollutionForSave.companyName" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div>
+    pollutant name
+    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.pollutantName" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div>
+    value pollution
+    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.valuePollution" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div>
+    year
+    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.year" [ngModelOptions]="{standalone: true}">
+  </div>
+  <button type="submit" class="update-button">save !</button>
+</form>
+
+
+
+
+<h2>Show all pollution</h2>
 <div><button (click)="getAllPollution()">Show all pollution</button></div>
 
 <div>
@@ -5,17 +30,17 @@
     <thead>
     <tr>
       <th>ID</th>
-      <th>companyId</th>
-      <th>pollutantId</th>
-      <th>valuePollution</th>
+      <th>company name</th>
+      <th>pollutant name</th>
+      <th>value pollution</th>
       <th>year</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let poll of pollutions">
+    <tr *ngFor="let poll of pollutionsForShow">
       <td>{{ poll.id }}</td>
-      <td>{{ poll.companyId }}</td>
-      <td>{{ poll.pollutantId }}</td>
+      <td>{{ poll.companyName }}</td>
+      <td>{{ poll.pollutantName }}</td>
       <td>{{ poll.valuePollution }}</td>
       <td>{{ poll.year }}</td>
     </tr>

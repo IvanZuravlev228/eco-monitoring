@@ -20,6 +20,9 @@ public class ExcelServiceImpl {
     public void saveDataFromFile(ExcelFile excelFile) {
         companyService.saveAll(excelFile.getCompanies());
         pollutantService.saveAll(excelFile.getPollutants());
-        pollutionService.saveAll(excelFile.getPollutions().stream().map(pollutionMapper::toModel).collect(Collectors.toList()));
+        pollutionService.saveAll(excelFile.getPollutions()
+                .stream()
+                .map(pollutionMapper::toModel)
+                .collect(Collectors.toList()));
     }
 }

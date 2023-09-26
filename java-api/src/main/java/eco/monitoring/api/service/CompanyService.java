@@ -5,6 +5,8 @@ import eco.monitoring.api.model.Company;
 import java.util.List;
 
 public interface CompanyService {
+    Company save(Company company);
+
     Company getById(Long id);
 
     List<Company> getAll();
@@ -12,4 +14,6 @@ public interface CompanyService {
     void saveAll(List<Company> companies);
 
     Company update(Long prevId, Company newCompany);
+
+    Company findByName(String name);
 }
