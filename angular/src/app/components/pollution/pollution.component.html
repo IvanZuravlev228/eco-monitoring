@@ -2,11 +2,15 @@
 <form (ngSubmit)="save()">
   <div>
     Company name:
-    <input type="text" class="company-name" [(ngModel)]="pollutionForSave.companyName" [ngModelOptions]="{standalone: true}">
+    <select class="company-name" [(ngModel)]="pollutionForSave.companyName" name="companyName" required>
+      <option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</option>
+    </select>
   </div>
   <div>
-    pollutant name
-    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.pollutantName" [ngModelOptions]="{standalone: true}">
+    Pollutant name:
+    <select class="company-description" [(ngModel)]="pollutionForSave.pollutantName" name="pollutantName" required>
+      <option *ngFor="let pollutant of pollutants" [value]="pollutant.name">{{ pollutant.name }}</option>
+    </select>
   </div>
   <div>
     value pollution
@@ -23,7 +27,7 @@
 
 
 <h2>Show all pollution</h2>
-<div><button (click)="getAllPollution()">Show all pollution</button></div>
+<div><button (click)="getAllPollutionForShow()">Show all pollution</button></div>
 
 <div>
   <table>
