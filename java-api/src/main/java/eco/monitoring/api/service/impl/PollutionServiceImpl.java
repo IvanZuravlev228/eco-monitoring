@@ -1,7 +1,8 @@
-package eco.monitoring.api.service;
+package eco.monitoring.api.service.impl;
 
 import eco.monitoring.api.model.Pollution;
 import eco.monitoring.api.repository.PollutionRepository;
+import eco.monitoring.api.service.PollutionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -32,4 +33,11 @@ public class PollutionServiceImpl implements PollutionService {
     public void saveAll(List<Pollution> pollutions) {
         pollutionRepository.saveAll(pollutions);
     }
+
+    @Override
+    public List<Pollution> findPollutionsByCompanyAndYear(Long companyId, Integer year) {
+        return pollutionRepository.findPollutionsByCompanyAndYear(companyId, year);
+    }
+
+
 }
