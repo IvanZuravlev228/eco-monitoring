@@ -1,0 +1,10 @@
+.nav-container {
+  background-color: #bbbbbb;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+}

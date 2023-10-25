@@ -9,6 +9,8 @@ import { MainComponent } from './components/main/main.component';
 import { CompanyComponent } from './components/company/company.component';
 import { PollutionComponent } from './components/pollution/pollution.component';
 import { PollutantComponent } from './components/pollutant/pollutant.component';
+import { RiskComponent } from './components/risk/risk.component';
+import { NavHeaderComponent } from './components/nav-header/nav-header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { PollutantComponent } from './components/pollutant/pollutant.component';
     CompanyComponent,
     PollutionComponent,
     PollutantComponent,
+    RiskComponent,
+    NavHeaderComponent,
   ],
   imports: [
     BrowserModule,

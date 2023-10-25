@@ -32,4 +32,11 @@ export class CompanyServiceService {
         "Content-Type": "application/json"
       }});
   }
+
+  deleteById(id: number) {
+    return this.http.delete<void>(environment.backendURL + "/companies/" + id, {
+      headers: {
+
+      }});
+  }
 }

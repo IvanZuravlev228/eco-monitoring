@@ -16,4 +16,6 @@ public interface CompanyService {
     Company update(Long prevId, Company newCompany);
 
     Company findByName(String name);
+
+    void deleteById(Long id);
 }

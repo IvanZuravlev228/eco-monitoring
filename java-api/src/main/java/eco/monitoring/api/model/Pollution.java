@@ -15,5 +15,6 @@ public class Pollution {
     @ManyToOne
     private Pollutant pollutant;
     private Double valuePollution;
+    private Double concentration;
     private Integer year;
 }

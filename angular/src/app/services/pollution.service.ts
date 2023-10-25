@@ -33,4 +33,11 @@ export class PollutionService {
         "Content-Type": "application/json"
       }});
   }
+
+  getPollutionsByCompanyIdAndYear(companyId: number, year: number) {
+    return this.http.get<Pollution[]>(environment.backendURL + "/pollution/company/" + companyId + "?year=" + year, {
+      headers: {
+
+      }});
+  }
 }

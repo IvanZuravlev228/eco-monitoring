@@ -25,6 +25,7 @@
         <input type="text" class="company-description" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}">
       </div>
       <button type="submit" class="update-button">update</button>
+      <button (click)="deleteCompany(company.id)">delete</button>
     </form>
   </div>
 </div>

@@ -45,4 +45,9 @@ public class CompanyServiceImpl implements CompanyService {
     public Company findByName(String name) {
         return companyRepository.findByName(name);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        companyRepository.deleteById(id);
+    }
 }
