@@ -24,6 +24,11 @@ export class PollutionComponent implements OnInit{
               private pollutantService: PollutantService) {
   }
 
+  ngOnInit(): void {
+    this.getAllCompanies();
+    this.getAllPollutants();
+  }
+
   getAllPollutionForShow() {
     this.pollutionService.getAllPollutionForShow().subscribe({
       next: (pollutions) => {
@@ -66,10 +71,5 @@ export class PollutionComponent implements OnInit{
         console.log(error);
       }
     })
-  }
-
-  ngOnInit(): void {
-    this.getAllCompanies();
-    this.getAllPollutants();
   }
 }

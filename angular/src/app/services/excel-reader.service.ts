@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as XLSX from "xlsx";
 import {environment} from "../../environment/environment";
-import {Company} from "../model/Company";
 import {HttpClient} from "@angular/common/http";
-import {Pollutant} from "../model/Pollutant";
-import {Pollution} from "../model/Pollution";
 import {ExcelFile} from "../model/ExcelFile";
-
 
 @Injectable({
   providedIn: 'root'
@@ -53,7 +49,7 @@ export class ExcelReaderService {
             this.excelFile.pollutions = XLSX.utils.sheet_to_json(worksheet, { raw: true });
           }
         }
-        console.log(this.excelFile);
+        // console.log(this.excelFile);
         this.saveExcelFile(this.excelFile).subscribe({
           next: () => {
             console.log("Data was added");
@@ -70,7 +66,7 @@ export class ExcelReaderService {
   }
 
   private saveExcelFile(excelFile: ExcelFile) {
-    console.log("saveExcelFile method was called");
+    // console.log("saveExcelFile method was called");
     return this.http.post<void>(environment.backendURL + "/add-excel", excelFile, {
       headers: {
         "Content-Type": "application/json"

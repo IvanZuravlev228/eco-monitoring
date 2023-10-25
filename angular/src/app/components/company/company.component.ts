@@ -45,4 +45,16 @@ export class CompanyComponent {
       }
     })
   }
+
+  deleteCompany(id: number) {
+    this.companyService.deleteById(id).subscribe({
+      next: () => {
+        const index = this.companies.findIndex(comp => comp.id === id);
+        this.companies.splice(index, 1);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  }
 }

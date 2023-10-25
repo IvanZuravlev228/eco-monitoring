@@ -8,5 +8,6 @@ public class PollutionRequestDto {
     private Long companyId;
     private Long pollutantId;
     private Double valuePollution;
+    private Double concentration;
     private Integer year;
 }

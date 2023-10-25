@@ -4,4 +4,5 @@ export class Pollution {
   pollutantId: number = -1;
   valuePollution:  number = 0.0;
   year: number = 0;
+  concentration: number = 0;
 }

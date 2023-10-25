@@ -12,4 +12,6 @@ public interface PollutionService {
     List<Pollution> getAll();
 
     void saveAll(List<Pollution> pollutions);
+
+    List<Pollution> findPollutionsByCompanyAndYear(Long companyId, Integer year);
 }

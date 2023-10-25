@@ -24,12 +24,6 @@ public class PollutionController {
     private final PollutionMapper pollutionMapper;
     private final PollutionShowMapper pollutionShowMapper;
 
-    @PostMapping
-    public ResponseEntity<PollutionShowResponseDto> save(@RequestBody @Valid PollutionShowResponseDto dto) {
-        return new ResponseEntity<>(pollutionShowMapper.toDto(
-                pollutionService.save(pollutionShowMapper.toModel(dto))), HttpStatus.OK);
-    }
-
     @GetMapping("/{id}")
     public ResponseEntity<PollutionResponseDto> getById(@PathVariable Long id) {
         return new ResponseEntity<>(pollutionMapper.toDto(pollutionService.getById(id)), HttpStatus.OK);
@@ -49,6 +43,21 @@ public class PollutionController {
                 .stream()
                 .map(pollutionShowMapper::toDto)
                 .collect(Collectors.toList()), HttpStatus.OK);
+    }
+
+    @GetMapping("/company/{companyId}")
+    public ResponseEntity<List<PollutionResponseDto>> findPollutionsByCompanyAndYear(@PathVariable Long companyId,
+                                                                                     @RequestParam Integer year) {
+        return new ResponseEntity<>(pollutionService.findPollutionsByCompanyAndYear(companyId, year)
+                .stream()
+                .map(pollutionMapper::toDto)
+                .collect(Collectors.toList()), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<PollutionShowResponseDto> save(@RequestBody @Valid PollutionShowResponseDto dto) {
+        return new ResponseEntity<>(pollutionShowMapper.toDto(
+                pollutionService.save(pollutionShowMapper.toModel(dto))), HttpStatus.OK);
     }
 
     @PostMapping("/save")
