@@ -1,0 +1,79 @@
+.buttons {
+  margin-bottom: 5px;
+}
+
+.submit-form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-item {
+  margin-bottom: 10px;
+}
+
+.company-name, .company-description {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  color: #333;
+  cursor: not-allowed;
+}
+
+.update-form {
+  width: 700px;
+  margin: 0 auto 25px auto;
+  border-bottom: 1px solid grey;
+}
+
+.update-input {
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.update-button {
+  background-color: #ff8700;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.update-button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.update-button:disabled {
+  background-color: #ccc;
+  color: #333;
+  cursor: not-allowed;
+}

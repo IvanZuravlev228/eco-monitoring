@@ -1,35 +1,16 @@
-.select-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
+.container {
+  padding: 20px;
 }
 
-.company-name {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.sort-button {
+  width: 100%;
+  font-weight: bold; /* Жирный текст */
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  color: #fff; /* Цвет текста */
 }
 
-.company-name:focus {
-  outline: none;
-  border: 2px solid #007bff;
-}
-
-.button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #0069d9;
-}
-
+/* Оформление таблицы */
 table {
   width: 100%;
   border-collapse: collapse;

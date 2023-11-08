@@ -1,31 +1,34 @@
 <h2>Add new company</h2>
-<div>
-  <form (ngSubmit)="save()">
-    <div>
+<section class="new">
+  <form (ngSubmit)="save()" class="submit-form">
+    <div class="form-item">
+      Company name:
       <input type="text" class="company-name" [(ngModel)]="company.name" [ngModelOptions]="{standalone: true}">
     </div>
-    <div>
+    <div class="form-item">
+      Description:
       <input type="text" class="company-description" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}">
     </div>
-    <button type="submit" class="update-button">save !</button>
+    <button type="submit" class="submit-button">save!</button>
   </form>
-</div>
+</section>
 
 <h2>Show all companies</h2>
 <div><button (click)="getAllCompanies()">Show all companies</button></div>
 
-<div>
+<section>
   <div *ngFor="let company of companies">
-    <form (ngSubmit)="update(company)">
+    <form (ngSubmit)="update(company)" class="update-form">
       <div>
-        <p>Company id: {{company.id}}</p>
-        <input type="text" class="company-name" [(ngModel)]="company.name" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="update-input" [(ngModel)]="company.name" [ngModelOptions]="{standalone: true}">
       </div>
       <div>
-        <input type="text" class="company-description" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="update-input" [(ngModel)]="company.description" [ngModelOptions]="{standalone: true}">
       </div>
-      <button type="submit" class="update-button">update</button>
-      <button (click)="deleteCompany(company.id)">delete</button>
+      <div class="buttons">
+        <button type="submit" class="update-button">update</button>
+        <button (click)="deleteCompany(company.id)" class="submit-button">delete</button>
+      </div>
     </form>
   </div>
-</div>
+</section>

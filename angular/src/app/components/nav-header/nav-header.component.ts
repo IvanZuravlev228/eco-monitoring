@@ -17,4 +17,8 @@ export class NavHeaderComponent {
   toRisk() {
     this.router.navigate(['/risk']);
   }
+
+  toTax() {
+    this.router.navigate(['/tax']);
+  }
 }

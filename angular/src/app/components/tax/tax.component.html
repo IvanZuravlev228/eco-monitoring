@@ -1,0 +1,30 @@
+<app-nav-header></app-nav-header>
+
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th><button (click)="sortTaxResultsByCompanyName()" class="sort-button">company</button></th>
+      <th><button (click)="sortTaxResultsByValuePollution()" class="sort-button">value pollution</button></th>
+      <th><button (click)="sortTaxResultsByTaxPollutant()" class="sort-button">pollutant</button></th>
+      <th><button (click)="sortTaxResultsByAvgPollution()" class="sort-button">avg pollution</button></th>
+      <th><button (click)="sortTaxResultsByNormPollution()" class="sort-button">norm pollution</button></th>
+      <th><button (click)="sortTaxResultsByTimeH()" class="sort-button">timeH</button></th>
+      <th><button (click)="sortTaxResultsByTaxCoefficient()" class="sort-button">tax coefficient</button></th>
+      <th><button (click)="sortTaxResultsByTax()" class="sort-button">tax</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tr of taxResults">
+      <td>{{ tr.companyName }}</td>
+      <td>{{ tr.valuePollution }}</td>
+      <td>{{ tr.pollutantName }}</td>
+      <td>{{ tr.avgPollution.toFixed(2) }}</td>
+      <td>{{ tr.normPollution }}</td>
+      <td>{{ tr.timeH }} hours</td>
+      <td>{{ tr.taxCoefficient.toFixed(2) }}</td>
+      <td>{{ tr.tax < 0 ? 0 : tr.tax.toFixed(2) }} ₴</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
