@@ -1,19 +1,19 @@
 <app-nav-header></app-nav-header>
 
 
-<div>
-  Company name:
+<section class="select-container">
+  Company name
   <select class="company-name" [(ngModel)]="companyIdForSearch" name="companyName" required>
     <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
   </select>
 
-  Year:
+  Year
   <select class="company-name" [(ngModel)]="companyYearForSearch" name="companyName" required>
     <option *ngFor="let year of years" [value]="year">{{ year }}</option>
   </select>
 
   <button (click)="showInformation()">show</button>
-</div>
+</section>
 
 
 <div>

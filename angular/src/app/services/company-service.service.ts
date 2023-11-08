@@ -39,4 +39,11 @@ export class CompanyServiceService {
 
       }});
   }
+
+  getById(id: number) {
+    return this.http.get<Company>(environment.backendURL + "/companies/" + id, {
+      headers: {
+
+      }});
+  }
 }

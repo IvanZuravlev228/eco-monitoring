@@ -10,7 +10,7 @@ import {PollutantService} from "../../services/pollutant.service";
 @Component({
   selector: 'app-pollution',
   templateUrl: './pollution.component.html',
-  styleUrls: ['./pollution.component.css']
+  styleUrls: ['./pollution.component.css', '../company/company.component.css']
 })
 export class PollutionComponent implements OnInit{
   pollutions: Pollution[] = [];

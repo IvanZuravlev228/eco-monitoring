@@ -1,27 +1,30 @@
 <h2>Add new pollution</h2>
-<form (ngSubmit)="save()">
-  <div>
-    Company name:
-    <select class="company-name" [(ngModel)]="pollutionForSave.companyName" name="companyName" required>
-      <option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</option>
-    </select>
-  </div>
-  <div>
-    Pollutant name:
-    <select class="company-description" [(ngModel)]="pollutionForSave.pollutantName" name="pollutantName" required>
-      <option *ngFor="let pollutant of pollutants" [value]="pollutant.name">{{ pollutant.name }}</option>
-    </select>
-  </div>
-  <div>
-    value pollution
-    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.valuePollution" [ngModelOptions]="{standalone: true}">
-  </div>
-  <div>
-    year
-    <input type="text" class="company-description" [(ngModel)]="pollutionForSave.year" [ngModelOptions]="{standalone: true}">
-  </div>
-  <button type="submit" class="update-button">save !</button>
-</form>
+<section>
+  <form (ngSubmit)="save()" class="submit-form">
+    <div class="form-item">
+      Company name:
+      <select class="company-name" [(ngModel)]="pollutionForSave.companyName" name="companyName" required>
+        <option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</option>
+      </select>
+    </div>
+    <div class="form-item">
+      Pollutant name:
+      <select class="company-description" [(ngModel)]="pollutionForSave.pollutantName" name="pollutantName" required>
+        <option *ngFor="let pollutant of pollutants" [value]="pollutant.name">{{ pollutant.name }}</option>
+      </select>
+    </div>
+    <div class="form-item">
+      value pollution
+      <input type="text" class="company-description" [(ngModel)]="pollutionForSave.valuePollution" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-item">
+      year
+      <input type="text" class="company-description" [(ngModel)]="pollutionForSave.year" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit" class="submit-button">save !</button>
+  </form>
+</section>
+
 
 
 
@@ -29,7 +32,7 @@
 <h2>Show all pollution</h2>
 <div><button (click)="getAllPollutionForShow()">Show all pollution</button></div>
 
-<div>
+<section>
   <table>
     <thead>
     <tr>
@@ -50,5 +53,4 @@
     </tr>
     </tbody>
   </table>
-
-</div>
+</section>

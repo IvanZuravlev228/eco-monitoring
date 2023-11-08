@@ -23,4 +23,11 @@ export class PollutantService {
 
       }});
   }
+
+  getById(id: number) {
+    return this.http.get<Pollutant>(environment.backendURL + "/pollutant/" + id, {
+      headers: {
+
+      }});
+  }
 }

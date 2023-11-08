@@ -11,6 +11,7 @@ import { PollutionComponent } from './components/pollution/pollution.component';
 import { PollutantComponent } from './components/pollutant/pollutant.component';
 import { RiskComponent } from './components/risk/risk.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
+import {TaxComponent} from "./components/tax/tax.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavHeaderComponent } from './components/nav-header/nav-header.component
     PollutantComponent,
     RiskComponent,
     NavHeaderComponent,
+    TaxComponent,
   ],
   imports: [
     BrowserModule,
